@@ -2,73 +2,74 @@ body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial,  sans-serif;
+    font-family: Arial, sans-serif;
 }
 .datepicker{
-    position: relative;
     display: inline-block;
-    margin: 30px;
+    margin: 20px;
+    margin-bottom: 5px;
 }
-.datepicker__input{
+.datapicker__input{
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 5px;
-    width: 290px;
+    padding: 15px;
 }
-.datepicker__input input{
+.datapicker__input input{
     border: none;
-    outline: none;
-    flex-grow: 1;
     padding: 5px;
-    font-size: 18px;
 }
-.datepicker__input button{
-    background: none;
-    border: none;
+.datapicker__input img{
+    background-color: #ffffff;
     cursor: pointer;
 }
-.datepicker__input button:hover{
-    transition: all 0.3s;
-    background-color: rgb(142, 149, 155);
+.datapicker__input img:hover{
+    background-color: #ccc;
+    border-radius: 9px;
 }
 .calendar{
-    position: absolute;
-    top: 80px;
+    margin: 1px 20px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: white;
+    border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 260px;
 }
-.calendar__header{
+.calender__header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-bottom: 2px;
+    background-color: #0866ff;
+    color: #fff;
+}
+.prev{
+    cursor: pointer;
+    font-size: 14px;
+}
+.prev:hover{
+    background-color: #b8b8b8;
+    border-radius: 10px;
+}
+.next{
+    cursor: pointer;
+    font-size: 14px;
+}
+.next:hover{
+    background-color: #b8b8b8;
+    border-radius: 10px;
+}
+.calender__header-day_names{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: #0866ff;
+    padding: 20px;
     border-bottom: 1px solid #ccc;
+    background-color: #0866ff;
+    color: #fff;
+    
 }
-.calendar__header button{
-    cursor: pointer;
-    font-size: 18px;
-}
-.calendar__header span{
-    color: white;
-}
-.calendar__body{
+.calender__body{
     padding: 10px;
-}
-.day-names{
-    display: flex;
-    justify-content: space-between;
-}
-.day-names span {
-    width:50px;
-    text-align: center;
-    font-weight: bold;
-    color: #555;
 }
 .days{
     display: flex;
@@ -76,14 +77,15 @@ body{
     justify-content: space-between;
 }
 .days span{
-    width: 40px;
-    height: 40px;
+    width: 31px;
+    height: 35px;
     text-align: center;
-    line-height: 45px;
-    margin-bottom: 5px;
     cursor: pointer;
+    line-height: 40px;
+    
 }
 .days span:hover{
-    background-color: #eee;
-    border-radius: 20%;
+    background-color: #c4bcbc;
+    border-radius: 15px;
+    padding: 2px;
 }
